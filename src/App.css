@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+*{
+    font-family: 'Lato', sans-serif;
+}
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.container{
+    width: 100%;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    display: flex;
+    flex-direction: row;
+}
+.navbar-brand{
+    width: 50%;
+    font-size: 2rem !important;
+}
+.nav-link{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+#coffee{
+    width: 30% !important;
+    background-color: crimson;
+    color: aliceblue;
+    border-radius: 10px;
+}
+#coffee:hover{
+    background-color: rgb(255, 61, 61);
+    color: rgb(0, 0, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width:60vw;
+    margin: 2rem auto;
+}
+.card-body{
+    width: 70%;
+    padding: 2rem 0px !important;
+}
+.card-title{
+    text-align: center;
+    font-size: 2rem !important;
+}
+.card-text{
+    color: grey !important;
+}
+.card-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.card-content input{
+    width: 75%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid grey !important;
+}
+.card-content .btn{
+    width: 20%;
+}
+/* POST */
+.postContain{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#reddit-embed{
+    border: 2px solid grey;
+    width: fit-content;
+    block-size: fit-content;
+    width: 40%;
+    height: 75vh;
+    margin: 0 auto !important;
+    display:inline-block !important;
+    object-fit: cover;
+    text-align:center;
+    padding: 0px !important;
+}
+.commentSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1rem !important;
+}
+.commentSection form{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* MEDIA QUERY */
+@media only screen and (max-width: 760px) {
+    .nav-link{
+        width: 40%;
+        margin: 0 auto;
+    }
+    .navbar-brand{
+        align-items: center;
+        margin: 0 auto;
+        width: 50%;
+    }
+    #coffee{
+        width: 100% !important;
+        font-size: 14px;
+    }
+    .card-body{
+        width: 90% !important;
+        font-size: small;
+    }
+    .card-content input{
+        width: 60%;}
+    .card-content .btn{
+        padding: 0.5rem !important;
+        width: 35%;
+        font-size: small;
+    }
+    .card{
+        width: 80% !important;
+    }
+    .postContain{
+        width: 100%;
+        border: 2px solid red ;
+    }
+    #reddit-embed{
+        width: fit-content;
+        block-size: fit-content;
+        width: 100%;
+        height: 70vh;
+        margin: 0 auto !important;
+        display:inline-block !important;
+        object-fit: cover;
+        text-align:center;
+        padding: 0px !important;
+    }
+    .commentSection{
+        margin: 2rem auto;
+        padding: 1rem !important;
+    }
+    .commentSection form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .commentSection input{
+        margin-bottom: 1rem;
+    }
 }
