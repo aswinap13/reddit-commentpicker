@@ -20,7 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = 'django-insecure-qdzbozebc9+5zx4+shr(9)g9%vwf$7z-$$g&pt8c0do822$*ye'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'src.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'react-frontend', 'build')],
+        'DIRS': [os.path.join(BASE_DIR,'react-frontend','build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
